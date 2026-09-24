@@ -41,8 +41,15 @@
     hit.forEach(function(a){
       var el = document.createElement('a');
       el.className = 'cell';
-      el.href = a.url;
-      el.setAttribute('download', '');
+      if (a.url) {
+        el.href = a.url;
+        el.setAttribute('download', '');
+      } else {
+        // 还没配下载地址：不可点，给个提示
+        el.className = 'cell pending';
+        el.href = 'javascript:void(0)';
+        el.title = '暂未提供下载';
+      }
       var img = document.createElement('img');
       img.className = 'ico'; img.src = a.icon || ''; img.alt = ''; img.loading = 'lazy';
       var meta = document.createElement('span'); meta.className = 'meta';

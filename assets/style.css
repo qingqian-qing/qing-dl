@@ -153,3 +153,7 @@ body{
   .cell .ico{width:34px;height:34px}
   .cell .nm{font-size:13.5px}
 }
+
+/* 未提供下载的卡片 */
+.cell.pending{opacity:.55;cursor:not-allowed;filter:grayscale(.35)}
+.cell.pending:hover{transform:none;box-shadow:0 1px 0 rgba(255,255,255,.95) inset,0 10px 24px rgba(95,125,155,.16)}
