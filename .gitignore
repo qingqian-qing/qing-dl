@@ -2,3 +2,5 @@ serve.out
 *.out
 .DS_Store
 files/
+__pycache__/
+*.pyc
